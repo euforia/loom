@@ -101,7 +101,7 @@ func (config *Config) connect() (*ssh.Session, error) {
 	keyfile = os.Getenv("HOME") + "/.ssh/id_rsa"
 	pkey, err = parsekey(keyfile)
 	if err == nil {
-		fmt.Println("Adding default rsa key")
+		//fmt.Println("Adding default rsa key")
 		sshconfig.Auth = append(sshconfig.Auth, ssh.PublicKeys(pkey))
 	}
 
